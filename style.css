@@ -39,7 +39,7 @@ header {
 }
 
 .me {
-  background-image: url("assets\me.jpeg");
+  background-image: url("assets/me.jpeg");
   width: 70px;
   height: 70px;
   background-position: center;
