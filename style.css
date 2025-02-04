@@ -1,0 +1,435 @@
+body {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+main {
+  /* width: 40em; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  /* border: 1px solid red; */
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+}
+
+.py {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.me {
+  background-image: url("./assets/me.jpeg");
+  width: 70px;
+  height: 70px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 1000px;
+}
+
+
+
+.subHeading {
+  margin-top: 5px;
+  font-size: 17px;
+}
+
+.heading::after {
+  content: " [bɪˈlɑːl/bee-laal]";
+  font-size: 16px;
+  padding-left: 5px;
+  font-weight: 500;
+  color: #5b5b5b;
+}
+
+.headingSubParent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.bodyText {
+  font-size: 18px;
+}
+
+.textCut {
+  position: absolute;
+  top: 48px;
+}
+
+#links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#links p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 15px;
+  width: 110%;
+  /* border: 1px solid red; */
+}
+
+.project {
+  border: 1px solid #a7a7a7;
+  border-radius: 5px;
+  background-color: transparent;
+  width: 43%;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+
+.project:hover {
+  cursor: pointer;
+}
+
+.projectHeading {
+  padding-top: 0;
+  margin-top: 12px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.projectStack {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.cloud1 {
+  position: absolute;
+  left: -400px;
+  top: 30px;
+  animation: dance 3s alternate steps(1) infinite;
+}
+
+@keyframes dance {
+  35% {
+    rotate: 5deg;
+  }
+
+  70% {
+    rotate: -5deg;
+  }
+}
+
+.cloud2 {
+  position: absolute;
+  right: -140px;
+  top: -30px;
+  animation: dance 3s 1s alternate steps(1) infinite;
+}
+
+.cloud3 {
+  position: absolute;
+  right: -300px;
+  top: 120px;
+  animation: dance 3s 1.5s alternate steps(1) infinite;
+}
+
+.cloud4 {
+  position: absolute;
+  left: -350px;
+  top: 150px;
+  animation: dance 3s 2s alternate steps(1) infinite;
+}
+
+.birb1 {
+  position: absolute;
+  left: -240px;
+  top: 220px;
+}
+
+.birb2 {
+  position: absolute;
+  left: -180px;
+  top: 0px;
+}
+
+.birb3 {
+  position: absolute;
+  right: -150px;
+  top: 80px;
+}
+
+.birb4 {
+  position: absolute;
+  right: -200px;
+  top: 200px;
+}
+
+.birbSmol1 {
+  position: absolute;
+  left: -260px;
+  top: 100px;
+}
+
+.birbSmol2 {
+  position: absolute;
+  right: -240px;
+  top: 20px;
+}
+
+/* #introSelected {
+    stroke-dasharray: 1220;
+    stroke-dashoffset: 1220;
+    animation: undraw 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+} */
+
+.intro:hover #introSelected {
+  stroke-dasharray: 1704;
+  /* position: absolute; */
+  /* width: 500px; */
+  stroke-dashoffset: 1704;
+  animation: draw 0.6s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.intro:not(:hover) #introSelected {
+  stroke-dasharray: 1704;
+  /* stroke-dashoffset: 1220; */
+  animation: undraw 0.3s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes undraw {
+  to {
+    stroke-dashoffset: 1704;
+  }
+}
+
+.like:hover #likeSelected {
+  stroke-dasharray: 1324;
+  stroke-dashoffset: 1324;
+  animation: drawLike 0.6s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.like:not(:hover) #likeSelected {
+  stroke-dasharray: 1324;
+  /* stroke-dashoffset: 1324; */
+  animation: undrawLike 0.3s ease-in-out;
+  /* animation-direction: reverse; */
+  animation-fill-mode: forwards;
+}
+
+@keyframes drawLike {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes undrawLike {
+  to {
+    stroke-dashoffset: 1324;
+  }
+}
+
+#playingWrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 20px;
+  height: 15px;
+}
+
+.playingBar {
+  width: 4px;
+  height: 100%;
+  background-color: #1ED760;
+  border-radius: 2px;
+  animation: playing 2.2s ease infinite alternate;
+}
+
+.playingBar:nth-of-type(2) {
+  animation-delay: -2.2s;
+}
+
+.playingBar:nth-of-type(3) {
+  animation-delay: -3.7s;
+}
+
+@keyframes playing {
+  10% {
+    transform: scaleY(0.3);
+  }
+
+  30% {
+    transform: scaleY(1);
+  }
+
+  60% {
+    transform: scaleY(0.5);
+  }
+
+  80% {
+    transform: scaleY(0.75);
+  }
+
+  100% {
+    transform: scaleY(0.5);
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .cloud1 {
+    left: -40px;
+    top: -40px;
+    width: 80px;
+  }
+
+
+  .cloud2 {
+    right: 0px;
+    top: -30px;
+    width: 100px;
+  }
+
+  .cloud3 {
+    right: 0px;
+    top: 100px;
+    width: 100px;
+  }
+
+  .cloud4 {
+    left: -70px;
+    top: 180px;
+    width: 50px;
+  }
+
+  .birb1 {
+    left: 200px;
+    top: 200px;
+  }
+
+  .birb2 {
+    left: 200px;
+    top: 40px;
+  }
+
+  .birb3 {
+    right: 150px;
+    top: -30px;
+  }
+
+  .birb4 {
+    right: 230px;
+    top: 200px;
+  }
+
+  .birbSmol1 {
+    left: -60px;
+    top: -10px;
+  }
+
+  .birbSmol2 {
+    right: 160px;
+    top: 100px;
+  }
+
+
+  main {
+    width: auto;
+    /* border: 1px solid red; */
+    justify-content: center;
+  }
+
+  .heading::after {
+    font-size: 12px;
+    text-wrap: nowrap;
+  }
+
+  .textCut {
+    top: 45px;
+    /* left: 0; */
+  }
+
+  .me {
+    width: 80px;
+    height: 65px;
+  }
+}
+
+
+
+.scrolling-text {
+  display: block;
+  white-space: nowrap;
+  animation: scrollRight 10s linear infinite;
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-120%);
+  }
+}
+
+.scrolling-text-longer {
+  display: block;
+  white-space: nowrap;
+  animation: scrollRightLong 10s linear infinite;
+}
+
+@keyframes scrollRightLong {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-230%);
+  }
+}
+
+@media (max-width: 430px) {
+  .textCut {
+    top: 72px;
+    width: 83px;
+  }
+
+
+}
