@@ -1,6 +1,10 @@
-const client = "b868f9c8993841ddb6687390d4dcccde";
-const secret = "162458c431fc472283cd0def76fe487d";
-const refresh = "AQCXndOEy_HbK_7GGDLUhz7IPO34z6LONfnqAtlKvqm0oJmeCcxJZqh7IcaoEM8_VnG8g0RlK_eUNyNPX4VupKoJNHKBOmu5Ipo_mhnnGFf11wWmxStDLQXajlgtwjUrEuQ";
+// const client = "b868f9c8993841ddb6687390d4dcccde";
+// const secret = "162458c431fc472283cd0def76fe487d";
+// const refresh = "AQCXndOEy_HbK_7GGDLUhz7IPO34z6LONfnqAtlKvqm0oJmeCcxJZqh7IcaoEM8_VnG8g0RlK_eUNyNPX4VupKoJNHKBOmu5Ipo_mhnnGFf11wWmxStDLQXajlgtwjUrEuQ";
+
+const client = "6b5157bf3245407e8ad12b2c23b1dd82";
+const secret = "70822fc7b0e846f5badc5b25c1c0539d";
+const refresh = "AQBMV5JWks9b5qSORs-G6vBb0y56nKyUgKeaOTvJXz6Yxmn0Y8VDtNMzmqHJJ5nydTtW-pkTYg9QbcqD7sAobfVS9C6LDuxyotfNbAjBL1jN_eEmF0iEzOYIfuM-6cTYDpOdyGxB944cfyyXoY1i42MNX82MzzYljq8RqyDQdade9vqi1h2ZtPMp8rD1DUSmrbsCazHNBI8b5oyC7m3aLNQ1ln4X0fl7hGVtnjROoUaWTNdGNNsjALr-9g"
 
 const basic = btoa(`${client}:${secret}`);
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
