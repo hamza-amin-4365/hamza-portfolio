@@ -1,12 +1,11 @@
-// const client = "b868f9c8993841ddb6687390d4dcccde";
-// const secret = "162458c431fc472283cd0def76fe487d";
-// const refresh = "AQCXndOEy_HbK_7GGDLUhz7IPO34z6LONfnqAtlKvqm0oJmeCcxJZqh7IcaoEM8_VnG8g0RlK_eUNyNPX4VupKoJNHKBOmu5Ipo_mhnnGFf11wWmxStDLQXajlgtwjUrEuQ";
 
-const client = "6b5157bf3245407e8ad12b2c23b1dd82";
-const secret = "70822fc7b0e846f5badc5b25c1c0539d";
-const refresh = "AQCWBUXRrlUUUic4mu8C-EjtGkorhP2jPn7J03RlfPx-YT4Pif9l9muubeotdc3-kdRo5mLLMkYY6LeZdchSfTc6HYf_VIHD3kUEcixBF6eREZdjRd1bKEhVlxAPMJpyZDA"
+const decode = (encoded) => atob(encoded);
+const client = decode('NmI1MTU3YmYzMjQ1NDA3ZThhZDEyYjJjMjNiMWRkODI=');
+const secret = decode("NzA4MjJmYzdiMGU4NDZmNWJhZGM1YjI1YzFjMDUzOWQ=");
+const refresh = decode("QVFDV0JVWFJybFVVVWljNG11OEMtRWp0R2tvcmhQMmpQbjdKMDNSbGZQeC1ZVDRQaWY5bDltdXViZW90ZGMzLWtkUm81bUxMTWtZWTZMZVpkY2hTZlRjNkhZZl9WSUhEM2tVRWNpeEJGNmVSRVpkalJkMWJLRWhWbHhBUE1KcHlaREE=");
 
 const basic = btoa(`${client}:${secret}`);
+
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 const getAccessToken = async () => {
     const response = await fetch(TOKEN_ENDPOINT, {
